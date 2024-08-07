@@ -6,23 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Welcome to another page | [“CELL (Cellular Effect Lesions Linker)”]</title>
+<title>Welcome to the CELL documentation | [“CELL”]</title>
 <meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="Welcome to another page" />
+<meta property="og:title" content="Welcome to the CELL documentation" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]" />
 <meta property="og:description" content="[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]" />
 <link rel="canonical" href="http://localhost:4000/interfaz_grafica_adn.html" />
 <meta property="og:url" content="http://localhost:4000/interfaz_grafica_adn.html" />
-<meta property="og:site_name" content="[“CELL (Cellular Effect Lesions Linker)”]" />
+<meta property="og:site_name" content="[“CELL”]" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Welcome to another page" />
+<meta property="twitter:title" content="Welcome to the CELL documentation" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]","headline":"Welcome to another page","url":"http://localhost:4000/interfaz_grafica_adn.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]","headline":"Welcome to the CELL documentation","url":"http://localhost:4000/interfaz_grafica_adn.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=6def9a5b1f9115bc90996d7ec2a0c8b89be79b44">
+    <link rel="stylesheet" href="/assets/css/style.css?v=564abaa4ea3368fd00336a60aa0fbed837aa6761">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -41,7 +41,7 @@
   <body>
     <div class="wrapper">
       <header>
-        <h1><a href="http://localhost:4000/">CELL (Cellular Effect Lesions Linker)</a></h1>
+        <h1><a href="http://localhost:4000/">CELL</a></h1>
 
         
 
@@ -57,9 +57,38 @@
       </header>
       <section>
 
-      <h2 id="welcome-to-another-page">Welcome to another page</h2>
+      <h1 id="welcome-to-the-cell-documentation">Welcome to the CELL documentation</h1>
 
-<p><em>yay</em></p>
+<p><strong>CELL (Cellular Effect Lesions Linker)</strong> is a graphical interface for cell survival predictions based on different simulation chains pre-loaded in the system for different cell lines. The program was written in Python using the PyQt5 library.</p>
+
+<h2 id="install">Install</h2>
+
+<p>The <a href="https://github.com/mpvalen/interfaz_grafica_adn">repository</a> has to be downloaded. The following libraries are necessary for the execution,  <code class="language-plaintext highlighter-rouge">python</code>  should be version 3.X minimum.</p>
+
+<ul>
+  <li>Numpy</li>
+  <li>Matplotlib</li>
+  <li>PyQt5</li>
+  <li>scipy</li>
+  <li>natsort</li>
+  <li>uncertainties</li>
+</ul>
+
+<p>The program allows the use of the <a href="https://faculty.washington.edu/trawets/mcds/">MCDS</a> (Monte Carlo Damage Simulation) software <a href="#references">[1]</a><a href="#references">[2]</a><a href="#references">[3]</a><a href="#references">[4]</a> . The latest version of MCDS (3.10A) is required for the correct execution of the program, the folder  <code class="language-plaintext highlighter-rouge">mcds</code> should be located inside the <code class="language-plaintext highlighter-rouge">INTERFAZ</code> directory.</p>
+
+<h2 id="execution">Execution</h2>
+
+<p>To use the interface, simply execute <code class="language-plaintext highlighter-rouge">main.py</code>.</p>
+
+<h3 id="references">References</h3>
+
+<p>[1] R.D. Stewart, V.K. Yu, A.G. Georgakilas, C. Koumenis, J.H. Park, D.J. Carlson, Monte Carlo Simulation of the Effects of Radiation Quality and Oxygen Concentration on Clustered DNA Lesions. Radiat. Res. 176, 587-602 (2011)</p>
+
+<p>[2] Y Hsiao and  R.D. Stewart, Monte Carlo Simulation of DNA Damage Induction by X-rays and Selected Radioisotopes. Phys. Med. Biol. 53, 233-244 (2008)</p>
+
+<p>[3] V.A. Semenenko and R.D. Stewart. Fast Monte Carlo simulation of DNA damage formed by electrons and light ions. Phys. Med. Biol. 51(7), 1693-1706 (2006)</p>
+
+<p>[4] V.A. Semenenko and R.D. Stewart. A fast Monte Carlo algorithm to simulate the spectrum of DNA damages formed by ionizing radiation. Radiat Res. 161(4), 451-457 (2004).</p>
 
 <p><a href="./">back</a></p>
 
