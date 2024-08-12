@@ -22,7 +22,7 @@
 {"@context":"https://schema.org","@type":"WebPage","description":"[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]","headline":"Welcome to the CELL documentation","url":"http://localhost:4000/interfaz_grafica_adn.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=564abaa4ea3368fd00336a60aa0fbed837aa6761">
+    <link rel="stylesheet" href="/assets/css/style.css?v=c2cd9df95bc2e866002f05c8191b9fef06a38d75">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -59,7 +59,7 @@
 
       <h1 id="welcome-to-the-cell-documentation">Welcome to the CELL documentation</h1>
 
-<p><strong>CELL (Cellular Effect Lesions Linker)</strong> is a graphical interface for cell survival predictions based on different simulation chains pre-loaded in the system for different cell lines. The program was written in Python using the PyQt5 library.</p>
+<p><strong>CELL (Cellular Effect Lesions Linker)</strong> is a graphical interface for cell survival predictions based on different simulation chains pre-loaded in the system for different cell lines <a href="#references">[1]</a>. The program was written in Python using the PyQt5 library.</p>
 
 <h2 id="install">Install</h2>
 
@@ -74,21 +74,44 @@
   <li>uncertainties</li>
 </ul>
 
-<p>The program allows the use of the <a href="https://faculty.washington.edu/trawets/mcds/">MCDS</a> (Monte Carlo Damage Simulation) software <a href="#references">[1]</a><a href="#references">[2]</a><a href="#references">[3]</a><a href="#references">[4]</a> . The latest version of MCDS (3.10A) is required for the correct execution of the program, the folder  <code class="language-plaintext highlighter-rouge">mcds</code> should be located inside the <code class="language-plaintext highlighter-rouge">INTERFAZ</code> directory.</p>
+<p>The program allows the use of the <a href="https://faculty.washington.edu/trawets/mcds/">MCDS</a> (Monte Carlo Damage Simulation) software <a href="#references">[2]</a><a href="#references">[3]</a><a href="#references">[4]</a><a href="#references">[5]</a> . The latest version of MCDS (3.10A) is required for the correct execution of the program, the folder  <code class="language-plaintext highlighter-rouge">mcds</code> should be located inside the <code class="language-plaintext highlighter-rouge">INTERFAZ</code> directory.</p>
+
+<p>The current version of the program has two theoretical models pre-loaded that can be combined with MCDS to estimate cell survival fractions:</p>
+<ul>
+  <li>Track-damage repair model (Wang et al. 2018)<a href="#references">[6]</a></li>
+  <li>Two lession kinetic model (TLK) (Stewart 2001)<a href="#references">[7]</a></li>
+</ul>
 
 <h2 id="execution">Execution</h2>
 
 <p>To use the interface, simply execute <code class="language-plaintext highlighter-rouge">main.py</code>.</p>
 
-<h3 id="references">References</h3>
+<h2 id="contents">Contents</h2>
 
-<p>[1] R.D. Stewart, V.K. Yu, A.G. Georgakilas, C. Koumenis, J.H. Park, D.J. Carlson, Monte Carlo Simulation of the Effects of Radiation Quality and Oxygen Concentration on Clustered DNA Lesions. Radiat. Res. 176, 587-602 (2011)</p>
+<ul>
+  <li>
+    <p><a href="/usage.html">Usage</a></p>
+  </li>
+  <li>
+    <p><a href="/examples.html">Examples</a></p>
+  </li>
+</ul>
 
-<p>[2] Y Hsiao and  R.D. Stewart, Monte Carlo Simulation of DNA Damage Induction by X-rays and Selected Radioisotopes. Phys. Med. Biol. 53, 233-244 (2008)</p>
+<h2 id="references">References</h2>
+
+<p>[1] S. Salgado, A. Carabe, I. Espinoza, S. Galvez, M.P. Valenzuela, A. Russomando, Monte Carlo simulations of cell survival in proton SOBP. Phys. Med. Biol. 68 195024 (2023)</p>
+
+<p>[2] V.A. Semenenko and R.D. Stewart. A fast Monte Carlo algorithm to simulate the spectrum of DNA damages formed by ionizing radiation. Radiat Res. 161(4), 451-457 (2004).</p>
 
 <p>[3] V.A. Semenenko and R.D. Stewart. Fast Monte Carlo simulation of DNA damage formed by electrons and light ions. Phys. Med. Biol. 51(7), 1693-1706 (2006)</p>
 
-<p>[4] V.A. Semenenko and R.D. Stewart. A fast Monte Carlo algorithm to simulate the spectrum of DNA damages formed by ionizing radiation. Radiat Res. 161(4), 451-457 (2004).</p>
+<p>[4] Y Hsiao and  R.D. Stewart, Monte Carlo Simulation of DNA Damage Induction by X-rays and Selected Radioisotopes. Phys. Med. Biol. 53, 233-244 (2008)</p>
+
+<p>[5] R.D. Stewart, V.K. Yu, A.G. Georgakilas, C. Koumenis, J.H. Park, D.J. Carlson, Monte Carlo Simulation of the Effects of Radiation Quality and Oxygen Concentration on Clustered DNA Lesions. Radiat. Res. 176, 587-602 (2011)</p>
+
+<p>[6] Wang, W., Li, C., Qiu, R. et al. Modelling of Cellular Survival Following Radiation-Induced DNA Double-Strand Breaks. Sci Rep 8, 16202 (2018). https://doi.org/10.1038/s41598-018-34159-3</p>
+
+<p>[7] Stewart RD. Two-lesion kinetic model of double-strand break rejoining and cell killing. Radiat Res. 2001 Oct;156(4):365-78. doi: 10.1667/0033-7587(2001)156[0365:tlkmod]2.0.co;2. PMID: 11554848.</p>
 
 <p><a href="./">back</a></p>
 

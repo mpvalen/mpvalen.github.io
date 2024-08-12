@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Usage | [“CELL”]</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Usage" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]" />
+<meta property="og:description" content="[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]" />
+<link rel="canonical" href="http://localhost:4000/usage.html" />
+<meta property="og:url" content="http://localhost:4000/usage.html" />
+<meta property="og:site_name" content="[“CELL”]" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Usage" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]","headline":"Usage","url":"http://localhost:4000/usage.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=c2cd9df95bc2e866002f05c8191b9fef06a38d75">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+
+<!-- Setup Google Analytics -->
+
+
+
+<!-- You can set your favicon here -->
+<!-- link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" -->
+
+<!-- end custom head snippets -->
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1><a href="http://localhost:4000/">CELL</a></h1>
+
+        
+
+        <p>A user-friendly tool for computing cell survival based on radiation-induced DNA damage</p>
+
+        
+        <p class="view"><a href="https://github.com/mpvalen/mpvalen.github.io">View the Project on GitHub <small>mpvalen/mpvalen.github.io</small></a></p>
+        
+
+        
+
+        
+      </header>
+      <section>
+
+      <h1 id="usage">Usage</h1>
+
+<p>After executing <code class="language-plaintext highlighter-rouge">main.py</code> the program shows a window where the user can specify the name of the folder for the inputs and outputs of the MCDS simulations. It can be ignored, in which case a default name will be used.</p>
+
+<p><img src="/images/cell_start.jpg" alt="cell_start" /></p>
+
+<p>CELL has different menus for each funcionality. Each of them is explained below</p>
+
+<h2 id="contents">Contents</h2>
+
+<ul>
+  <li>
+    <p><a href="#mcds">MCDS</a></p>
+  </li>
+  <li>
+    <p><a href="#fluka">FLUKA</a></p>
+  </li>
+  <li>
+    <p><a href="#plot">Plot</a></p>
+  </li>
+  <li>
+    <p><a href="#database">Database</a></p>
+  </li>
+  <li>
+    <p><a href="#models">Models</a></p>
+  </li>
+</ul>
+
+<h2 id="mcds">MCDS</h2>
+
+<p>This menu serves as a UI for MCDS. The user can modify different parameters or leave the default values. The categories follow the same format of MCDS, i.e. CELL, SIMCOM (simulation parameters), RADX (radiation field parameters), EVO2 (Oxygen parameters), MCDS (FBL) and DMSO (Free radicals).</p>
+
+<p><img src="/images/cell_mcds.jpg" alt="cell_mcds" /></p>
+
+<p>After setting the values for the simulation, the user has to generate an input (using the button from the menu) and then launch a simulation by choosing the folder that has the inputs. Here, the user can also create a new folder for the inputs and outputs if the first windows was ignored.</p>
+
+<p>This menu also has an option to calculate the cell survival for two cell lines: V79 and HSG. The model used for this has to be checked in the menu <a href="#models">Models</a>. In this version of the program only two models can be used through this button (Wang and TLK).</p>
+
+<h2 id="fluka">FLUKA</h2>
+
+<p>This menu serves as a bridge between Monte Carlo (MC) simulations of particle transport, the software MCDS and a mechanistic model for cell survival. The MC code used by our group is FLUKA, hence the name of the menu.</p>
+
+<p><img src="/images/cell_fluka.jpg" alt="cell_fluka" /></p>
+
+<p>The user can add different parameters for the simulation chain. The basic ones are related to the MC simulation, i.e Dose data and Spectrum data, which should follow the format of a FLUKA output (see more in <a href="/examples.html">Examples</a>).</p>
+
+<p><img src="/images/cell_fluka_parameters.jpg" alt="cell_fluka_parameters" /></p>
+
+<p>A database can be specified, but a default one is also included. After this, the depth (minimum and maximum) has to be entered by the user and it should match the depths in the MC files. The point separation is a reference to the binning used for the MC simulation.</p>
+
+<p>The rest of the parameters are needed to calculate cell survival. The cell line (V79 or HSG), its DNA content and Nucleus Diameter (NDIA) and finally the maximum dose to present the data normalized.</p>
+
+<p>To run the simulation chain the button <code class="language-plaintext highlighter-rouge">Fluka -&gt; Survival</code> has to be clicked. A default folder will be used for the outputs, but a different one can be specified in this same menu.</p>
+
+<h2 id="plot">Plot</h2>
+
+<p>Texto</p>
+
+<p><img src="/images/cell_plot.jpg" alt="cell_plot" /></p>
+
+<p><img src="/images/cell_plot_example.jpg" alt="cell_plot_example" /></p>
+
+<h2 id="database">Database</h2>
+
+<p>Texto</p>
+
+<p><img src="/images/cell_database.jpg" alt="cell_database" /></p>
+
+<h2 id="models">Models</h2>
+
+<p>In this menu the user can choose between 3 models to estimate cell survival:</p>
+<ul>
+  <li>Track-damage repair model (Wang et al. 2018)<a href="/interfaz_grafica_adn.html#references">[6]</a></li>
+  <li>Two lession kinetic model (TLK) (Stewart 2001)<a href="/interfaz_grafica_adn.html#references">[7]</a></li>
+  <li>A machine learning model developed by our group.</li>
+</ul>
+
+<p><img src="/images/cell_models.jpg" alt="cell_models" /></p>
+
+<p>For the first model (Wang et. al 2018), the user can use the original parameters, a modified version or change them manually. It is also possible to add new cell lines by adding the values for each parameter and these can be used later for the simulation chain (see more in <a href="/examples.html">Examples</a>)</p>
+
+<p>For the TLK model a set of default parameters is used and cannot be modified.</p>
+
+<p>For the machine learning model, each parameter can be changed and a range of doses needs to be given.</p>
+
+<p><img src="/images/cell_models_ml.jpg" alt="cell_models_ml" /></p>
+
+<p><a href="/interfaz_grafica_adn.html">back</a></p>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/mpvalen">mpvalen</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <script src="/assets/js/scale.fix.js"></script>
+  </body>
+</html>
