@@ -4,3 +4,16 @@ plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
 title: [CELL]
 description: [A user-friendly tool for computing cell survival based on radiation-induced DNA damage]
+cell_repository: [https://github.com/mpvalen/interfaz_grafica_adn]
+sidebar:
+  - name: GitHub
+    icon: <i class="fa-brands fa-github"></i>
+    link: https://github.com/mpvalen/
+  - name: Linkedin
+    icon: <i class="fa-brands fa-linkedin"></i>
+    link: https://www.linkedin.com/in/mpiavalenzuela
+
+my-name: [Maria Pia Valenzuela]
+my-title: [MSc in Medical Physics]
+my-github: [https://github.com/mpvalen]
+my-picture: images/me-linkedin.jpg
