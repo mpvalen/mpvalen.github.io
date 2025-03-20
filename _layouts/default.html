@@ -51,8 +51,8 @@
         <img class="img-circle" src="{{ site.my-picture | relative_url }}" alt="Profile Picture">
         {% endif %}
 
-        {% if site.my-description %}
-        <h3>{{ site.my-title }}</h3>
+        {% if site.my-title %}
+        <h3 class="sidebar-title">{{ site.my-title }}</h3>
         {% endif %}
 
         {% include sidebar.html %}

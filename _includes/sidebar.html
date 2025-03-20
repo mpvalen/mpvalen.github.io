@@ -3,27 +3,33 @@
     ul
     {
         list-style-type:none;
-        padding:0px;
+        padding: 0px;
         margin:0px;
         text-align: center;
     }
     li
     {
     display:inline;
-        padding-left:14px;
+        padding-left:15px;
     }   
-      ul.link a {
-        color:var(--clr-h1-and-bold);
-        text-decoration:none;
-      }
+    ul.link a {
+      color: var(--clr-h1-and-bold);
+      text-decoration: none;
+      font-size: 20px;
+      display: inline-block;
+      transition: all 0.3s ease;
+    }
 
-      ul.link a:hover, a:focus {
+      ul.link a:hover, ul.link a:focus {
         color: var(--clr-a-text-hvr);
+        transform: scale(1.2);
+        display: inline-block;
+        transition: all 0.3s ease;
       }
     </style>
     <ul class="link">
       {%- for platform in site.sidebar %}
-      <!-- <li><a href="{{ platform.link }}"><i class="{{ platform.icon }}"></i> {{ platform.name }}</a></li> -->
+       <!--<li><a href="{{ platform.link }}">{{ platform.icon }}&nbsp;{{ platform.name }}</a></li>-->
        <li><a href="{{ platform.link }}">{{ platform.icon }}&nbsp;{{ platform.name }}</a></li>
       {%- endfor %}
     </ul>
