@@ -22,7 +22,7 @@
 {"@context":"https://schema.org","@type":"WebPage","description":"[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]","headline":"Usage","url":"http://localhost:4000/usage.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=5ee7cd49f22b77f1501770a792d4b0edaf7874d9">
+    <link rel="stylesheet" href="/assets/css/style.css?v=a1297bdc157efcc94ac88e6c1e3507295aca83f6">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -117,11 +117,19 @@
 
 <h2 id="plot">Plot</h2>
 
-<p>Texto</p>
+<p>This menu allows the user to easily visualize simulation results and compare different models.</p>
+
+<p>To use it, the minimum requirement is a folder with at least one file with cell survival results (<code class="language-plaintext highlighter-rouge">.db</code>). Users can specify a label for the plot and set tick spacing on the X-axis, the default being 10. If the results file includes error values, these can be added as errorbars by clicking in the <code class="language-plaintext highlighter-rouge">Add errorbar</code> option. After this, the user can plot the data by clicking on the <code class="language-plaintext highlighter-rouge">Generate plots</code> button.</p>
+
+<p>Additionally, this menu allows users to add a set of experimental data. This can be done independently (to show only expeirmental points) or in combination with a model’s predictions for comparison. In either case, the user has to specify a file with the experimental data, add a label and finally click on the <code class="language-plaintext highlighter-rouge">Generate plots</code> button.</p>
 
 <p><img src="/images/cell_plot.jpg" alt="cell_plot" /></p>
 
+<p>Users can add multiple plots as needed. To do so, simply click on the <code class="language-plaintext highlighter-rouge">Add plot</code> button at the top of the menu. Then, by using the drop-down list, they can select different plots to assign each one of them a folder with results, a label, and other settings. This feature is particularly useful for model comparisons.</p>
+
 <p><img src="/images/cell_plot_example.jpg" alt="cell_plot_example" /></p>
+
+<p>Additional features related to plot styling are available through the icon-based options above the plot area. More details can be found in the <a href="/examples.html">Examples</a> section.</p>
 
 <h2 id="database">Database</h2>
 

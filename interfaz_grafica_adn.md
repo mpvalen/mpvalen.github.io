@@ -33,6 +33,15 @@ To use the interface, simply execute `main.py`.
 
 - [Examples](./examples.md)
 
+## Citing CELL
+
+If you use CELL in a scientific publication, consider citing the following reference:
+
+Valenzuela M.P., Ciardiello A., Buvic L., Espinoza I., Galvez S., Salgado S., Videla H.,
+Russomando A., CELL: A user-friendly tool for computing cell survival based on radiation-induced
+DNA damage, Radiotherapy & Oncology, 194, 2024, Digital poster. 
+[https://doi.org/10.1016/S0167-8140(24)02410-1](https://doi.org/10.1016/S0167-8140(24)02410-1)
+
 ## References
 
 [1] S. Salgado, A. Carabe, I. Espinoza, S. Galvez, M.P. Valenzuela, A. Russomando, Monte Carlo simulations of cell survival in proton SOBP. Phys. Med. Biol. 68 195024 (2023)

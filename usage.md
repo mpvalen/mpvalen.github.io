@@ -50,11 +50,19 @@ To run the simulation chain the button `Fluka -> Survival` has to be clicked. A 
 
 ## Plot
 
-Texto
+This menu allows the user to easily visualize simulation results and compare different models.
+
+To use it, the minimum requirement is a folder with at least one file with cell survival results (`.db`). Users can specify a label for the plot and set tick spacing on the X-axis, the default being 10. If the results file includes error values, these can be added as errorbars by clicking in the `Add errorbar` option. After this, the user can plot the data by clicking on the `Generate plots` button.
+
+Additionally, this menu allows users to add a set of experimental data. This can be done independently (to show only expeirmental points) or in combination with a model's predictions for comparison. In either case, the user has to specify a file with the experimental data, add a label and finally click on the `Generate plots` button.
 
 ![cell_plot](./images/cell_plot.jpg)
 
+Users can add multiple plots as needed. To do so, simply click on the `Add plot` button at the top of the menu. Then, by using the drop-down list, they can select different plots to assign each one of them a folder with results, a label, and other settings. This feature is particularly useful for model comparisons. 
+
 ![cell_plot_example](./images/cell_plot_example.jpg)
+
+Additional features related to plot styling are available through the icon-based options above the plot area. More details can be found in the [Examples](./examples.md) section.
 
 ## Database
 
