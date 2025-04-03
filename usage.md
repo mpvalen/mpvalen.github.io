@@ -66,9 +66,27 @@ Additional features related to plot styling are available through the icon-based
 
 ## Database
 
-Texto
+In this menu, the user can generate a database. This file compiles simulation results from MCDS based on certain input parameters provided by the user, such as an energy range or dose. The database, with the `.db` extension, consists of:
+
+ - `energy` of the particles, given by the user's input. This value can be fixed or within a range (see more in [Examples](./examples.md)).
+ - `LET_cell_entry`, `LET_nuc_entry`, `LET_nuc_exit`: The LET at different positions in the cell, values obtained from MCDS.
+ - `Yield` : Number of DBS clusters per cell, from Table 2 of MCDS.
+ - `Yielde`: Standard deviation of the yield, from Table 2 of MCDS.
+ - `lambda`: Number of DSB clusters per cell per track, from Table 3 of MCDS.
+ - `lambdae`: Standard deviation of lambda, from Table 3 of MCDS.
 
 ![cell_database](./images/cell_database.jpg)
+
+The user can change the default particle, the seed, NOCS (number of simulations), and cell parameters (NDIA, CDIA and DNA).
+After this, a number of bins must be selected to divide the energy or dose range. This number corresponds to the total number of rows in the database.
+There are default values for energy and dose, both for fixed values and ranges, as follows:
+-   The default energy range is [0.5 - 500 MeV], divided into as many bins as the user chooses.
+-   The default dose range is [0.1 - 10 Gy].
+-   The default fixed energy is 0.5 MeV.
+-   The default fixed dose is 0.1 Gy.
+
+
+It is recommended to check the [Examples](./examples.md) section for more details on these options.
 
 ## Models
 

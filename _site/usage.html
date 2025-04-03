@@ -22,7 +22,7 @@
 {"@context":"https://schema.org","@type":"WebPage","description":"[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]","headline":"Usage","url":"http://localhost:4000/usage.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=a1297bdc157efcc94ac88e6c1e3507295aca83f6">
+    <link rel="stylesheet" href="/assets/css/style.css?v=5c095c69c31b14808b71ce77c6ff77d1f32e82f5">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -133,9 +133,30 @@
 
 <h2 id="database">Database</h2>
 
-<p>Texto</p>
+<p>In this menu, the user can generate a database. This file compiles simulation results from MCDS based on certain input parameters provided by the user, such as an energy range or dose. The database, with the <code class="language-plaintext highlighter-rouge">.db</code> extension, consists of:</p>
+
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">energy</code> of the particles, given by the user’s input. This value can be fixed or within a range (see more in <a href="/examples.html">Examples</a>).</li>
+  <li><code class="language-plaintext highlighter-rouge">LET_cell_entry</code>, <code class="language-plaintext highlighter-rouge">LET_nuc_entry</code>, <code class="language-plaintext highlighter-rouge">LET_nuc_exit</code>: The LET at different positions in the cell, values obtained from MCDS.</li>
+  <li><code class="language-plaintext highlighter-rouge">Yield</code> : Number of DBS clusters per cell, from Table 2 of MCDS.</li>
+  <li><code class="language-plaintext highlighter-rouge">Yielde</code>: Standard deviation of the yield, from Table 2 of MCDS.</li>
+  <li><code class="language-plaintext highlighter-rouge">lambda</code>: Number of DSB clusters per cell per track, from Table 3 of MCDS.</li>
+  <li><code class="language-plaintext highlighter-rouge">lambdae</code>: Standard deviation of lambda, from Table 3 of MCDS.</li>
+</ul>
 
 <p><img src="/images/cell_database.jpg" alt="cell_database" /></p>
+
+<p>The user can change the default particle, the seed, NOCS (number of simulations), and cell parameters (NDIA, CDIA and DNA).
+After this, a number of bins must be selected to divide the energy or dose range. This number corresponds to the total number of rows in the database.
+There are default values for energy and dose, both for fixed values and ranges, as follows:</p>
+<ul>
+  <li>The default energy range is [0.5 - 500 MeV], divided into as many bins as the user chooses.</li>
+  <li>The default dose range is [0.1 - 10 Gy].</li>
+  <li>The default fixed energy is 0.5 MeV.</li>
+  <li>The default fixed dose is 0.1 Gy.</li>
+</ul>
+
+<p>It is recommended to check the <a href="/examples.html">Examples</a> section for more details on these options.</p>
 
 <h2 id="models">Models</h2>
 
