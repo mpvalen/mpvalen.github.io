@@ -30,7 +30,12 @@ This menu serves as a UI for MCDS. The user can modify different parameters or l
 
 After setting the values for the simulation, the user has to generate an input (using the button from the menu) and then launch a simulation by choosing the folder that has the inputs. Here, the user can also create a new folder for the inputs and outputs if the first windows was ignored.
 
-This menu also has an option to calculate the cell survival for two cell lines: V79 and HSG. The model used for this has to be checked in the menu [Models](#models). In this version of the program only two models can be used through this button (Wang and TLK).
+This menu also has an option to calculate the cell survival for different cell lines. The model used for this has to be checked in the menu [Models](#models). 
+In this version of the program, only two models can be used through this button: Wang and TLK. The available cell lines depend on the chosen model:
+
+- Wang: V79, HSG, T1, or any new cell line added by the user (see section [Models](#models)).
+
+- TLK: V79, HSG.
 
 ## FLUKA
 
@@ -104,5 +109,10 @@ For the TLK model a set of default parameters is used and cannot be modified.
 For the machine learning model, each parameter can be changed and a range of doses needs to be given. 
 
 ![cell_models_ml](./images/cell_models_ml.jpg)
+
+For the machine learning model, each parameter can be changed and a dose range must be provided. The figure belown shows the menu for the machine learning model.
+The user can manually enter the parameter values or select a PIDE ID to use data from a specific experiment as input. For the latter, the checkbox  `Use PIDE values for a given #ExpID` must be selected.
+
+![cell_ML_PIDE](./images/cell_ML_PIDE.jpg)
 
 [back](./interfaz_grafica_adn.md)
