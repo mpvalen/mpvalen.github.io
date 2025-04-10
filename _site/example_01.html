@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Run a simple MCDS simulation for a given cell line. | [“CELL”]</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Run a simple MCDS simulation for a given cell line." />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]" />
+<meta property="og:description" content="[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]" />
+<link rel="canonical" href="http://localhost:4000/example_01.html" />
+<meta property="og:url" content="http://localhost:4000/example_01.html" />
+<meta property="og:site_name" content="[“CELL”]" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Run a simple MCDS simulation for a given cell line." />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]","headline":"Run a simple MCDS simulation for a given cell line.","url":"http://localhost:4000/example_01.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=d7bb45ffdbbdbfe60b9216f12839003a522ed0b1">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+
+<!-- Setup Google Analytics -->
+
+
+
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<!-- end custom head snippets -->
+  </head>
+  <body>
+    <div class="wrapper">
+      
+
+      <header>
+        
+
+        
+        <h1 class="sidebar-title"><a href="https://github.com/mpvalen/interfaz_grafica_adn">CELL</a></h1>
+        
+
+        
+
+        <p>A user-friendly tool for computing cell survival based on radiation-induced DNA damage</p>
+
+        
+        <p class="view"><a href="https://github.com/mpvalen/mpvalen.github.io">View the Project on Github<small>mpvalen/mpvalen.github.io</small></a></p>
+        
+
+      </header>
+        
+      
+      
+      <section>
+
+      <h1 id="run-a-simple-mcds-simulation-for-a-given-cell-line">Run a simple MCDS simulation for a given cell line.</h1>
+<p>In this tutorial, we’ll show you how to run an MCDS simulation using the following setup:</p>
+
+<ul>
+  <li>Irradiation of V79 cells with monoenergetic protons at 200 MeV in an environment with 20% oxygen concentration, and a dose of 2 Gy.</li>
+</ul>
+
+<p>First, you need to define the name of the folder where the results will be saved. In this example, we’ll use the name <code class="language-plaintext highlighter-rouge">example_01</code>.</p>
+
+<p><img src="/images/example_01/directory_name.jpg" alt="directory_name_example" /></p>
+
+<p>Next, from the top menu, select <code class="language-plaintext highlighter-rouge">MCDS</code> to set the input parameters. We’ll start by entering the cell parameters through the option <code class="language-plaintext highlighter-rouge">Cell</code>. We need to define the cell characteristics (such as cell diameter, DNA content, etc.). We’ll use the following values:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Parameter</th>
+      <th>V79</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>NDIA (Nucleus Diameter)</td>
+      <td>11 \(\mu\)m</td>
+    </tr>
+    <tr>
+      <td>CDIA (Cell Diameter)</td>
+      <td>11 \(\mu\)m</td>
+    </tr>
+    <tr>
+      <td>DNA</td>
+      <td>5.6 Gbp</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Note that, in this case, we’ve assumed the cells have the same nuclear and cell diameter, but this can be adjusted by the user. We can also leave out some values, such as the WEM (water equivalent material thickness). In that case, the program will use the default value from MCDS.</p>
+
+<p><img src="/images/example_01/cell_parameters_example.jpg" alt="cell_parameters_example" /></p>
+
+<p>Now we add want to specify the irradiation conditions, to do this we use the <code class="language-plaintext highlighter-rouge">Radiation field parameters</code> from the <code class="language-plaintext highlighter-rouge">MCDS</code> menú. Here we can select the type of particle (protons in this case), the kinetic energy (MeV) and the absorbed dose (AD).</p>
+
+<p><img src="/images/example_01/radiation_field_parameters.jpg" alt="radiation_field_parameters" /></p>
+
+<p>Finally, set the oxygenation conditions by selecting Oxygen from the MCDS menu. Here, you can enter either an oxygen percentage or a pressure value in mmHg.</p>
+
+<p><img src="/images/example_01/oxygen_parameters_example.jpg" alt="oxygen_parameters" /></p>
+
+<p>Once you’ve entered all the desired parameters, the next step is to generate the input file, which will be saved in the folder you specified earlier (example_01). The file will have the name of the folder and an id, in this case the file its <code class="language-plaintext highlighter-rouge">example_01_0.inp</code>.</p>
+
+<p><img src="/images/example_01/generate_input_example.jpg" alt="input_example" /></p>
+
+<p>You can create as many input files as you like before running the simulations. For instance, you could change the oxygen percentage to 25% and generate a new input file. This new file now has a different id (<code class="language-plaintext highlighter-rouge">example_01_1.inp</code>).</p>
+
+<p><img src="/images/example_01/files_example.jpg" alt="different_inputs" /></p>
+
+<p>After you’ve created all the necessary files, start the simulation by clicking on <code class="language-plaintext highlighter-rouge">Launch simulation</code>. A window will pop up where you’ll need to select the folder containing your input files (<code class="language-plaintext highlighter-rouge">example_01</code>).</p>
+
+<p><img src="/images/example_01/launch_simulation_example.jpg" alt="launch_simulation" /></p>
+
+<p>Once all simulations are complete, the console will display the message End MCDS.</p>
+
+<p><img src="/images/example_01/end_mcds_view.jpg" alt="end_mcds" /></p>
+
+<p><a href="/examples.html">back</a></p>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/mpvalen">mpvalen</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button> 
+    <script src="/assets/js/scale.fix.js"></script>
+    <script src="/assets/js/script.js"></script>
+
+  </body>
+</html>
