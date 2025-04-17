@@ -43,4 +43,6 @@ Once all simulations are complete, the console will display the message End MCDS
 
 ![end_mcds](./images/example_01/end_mcds_view.jpg)
 
+[Next: Calculate the cell survival fraction using Wang's model](./example_02.md)
+
 [back](./examples.md)
