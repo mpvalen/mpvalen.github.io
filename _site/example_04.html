@@ -7,20 +7,20 @@
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Calculate the cell survival fraction using Wang’s model | [“CELL”]</title>
+<title>Plot the cell survival against dose | [“CELL”]</title>
 <meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="Calculate the cell survival fraction using Wang’s model" />
+<meta property="og:title" content="Plot the cell survival against dose" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]" />
 <meta property="og:description" content="[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]" />
-<link rel="canonical" href="http://localhost:4000/example_02.html" />
-<meta property="og:url" content="http://localhost:4000/example_02.html" />
+<link rel="canonical" href="http://localhost:4000/example_04.html" />
+<meta property="og:url" content="http://localhost:4000/example_04.html" />
 <meta property="og:site_name" content="[“CELL”]" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Calculate the cell survival fraction using Wang’s model" />
+<meta property="twitter:title" content="Plot the cell survival against dose" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]","headline":"Calculate the cell survival fraction using Wang’s model","url":"http://localhost:4000/example_02.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]","headline":"Plot the cell survival against dose","url":"http://localhost:4000/example_04.html"}</script>
 <!-- End Jekyll SEO tag -->
 
     <link rel="stylesheet" href="/assets/css/style.css?v=429d0b21a6efce01298f8f73b4e7dffdbe7c76d6">
@@ -62,29 +62,7 @@
       
       <section>
 
-      <h1 id="calculate-the-cell-survival-fraction-using-wangs-model">Calculate the cell survival fraction using Wang’s model</h1>
-
-<p>This tutorial is a continuation of <a href="/example_01.html">Run a simple MCDS simulation for a given cell line</a>. In the previous step, we ran MCDS simulations using input parameters for a V79 cell. First, make sure the right model is selected. In this case, we will use Wang’s model with its original parameters.</p>
-
-<p><img src="/images/example_02/check_selected_model.jpg" alt="check selected model" /></p>
-
-<p>Next, go to the <code class="language-plaintext highlighter-rouge">MCDS</code> menu and select <code class="language-plaintext highlighter-rouge">Calculate cell survival</code>, then choose the corresponding cell line (in this case, V79). Select the folder containing the MCDS simulation results—following the previous example, this would be <code class="language-plaintext highlighter-rouge">example_01</code>.</p>
-
-<p><img src="/images/example_02/check_V79_cell.jpg" alt="check cell line" /></p>
-
-<p>After completing this step, a file named <code class="language-plaintext highlighter-rouge">survival_dose_V79_Wang.db</code> will be generated. This file contains:</p>
-<ul>
-  <li>Calculated cell survival (Survival) and its associated error (Survivalerr)</li>
-  <li>Dose</li>
-  <li>Number of DSBs per cell per Gy (Yield) and its error (Yielderr)</li>
-  <li>Number of DSBs per cell per track (lambda) and its error (lambdaerr)</li>
-</ul>
-
-<p><img src="/images/example_02/survival_output_file.jpg" alt="cell survival output file" /></p>
-
-<p><em>Note: The Yield reported by MCDS corresponds to DSBs per cell. To use this value with this model, it is divided by the dose. The resulting value is the one reported in the table above.</em></p>
-
-<p><a href="/examples.html">back</a></p>
+      <h1 id="plot-the-cell-survival-against-dose">Plot the cell survival against dose</h1>
 
 
       </section>

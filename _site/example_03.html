@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+
+<!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Generate a database with different doses | [“CELL”]</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Generate a database with different doses" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]" />
+<meta property="og:description" content="[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]" />
+<link rel="canonical" href="http://localhost:4000/example_03.html" />
+<meta property="og:url" content="http://localhost:4000/example_03.html" />
+<meta property="og:site_name" content="[“CELL”]" />
+<meta property="og:type" content="website" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Generate a database with different doses" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","description":"[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]","headline":"Generate a database with different doses","url":"http://localhost:4000/example_03.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+    <link rel="stylesheet" href="/assets/css/style.css?v=429d0b21a6efce01298f8f73b4e7dffdbe7c76d6">
+    <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <![endif]-->
+    <!-- start custom head snippets, customize with your own _includes/head-custom.html file -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css">
+
+<!-- Setup Google Analytics -->
+
+
+
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<!-- end custom head snippets -->
+  </head>
+  <body>
+    <div class="wrapper">
+      
+
+      <header>
+        
+
+        
+        <h1 class="sidebar-title"><a href="https://github.com/mpvalen/interfaz_grafica_adn">CELL</a></h1>
+        
+
+        
+
+        <p>A user-friendly tool for computing cell survival based on radiation-induced DNA damage</p>
+
+        
+        <p class="view"><a href="https://github.com/mpvalen/mpvalen.github.io">View the Project on Github<small>mpvalen/mpvalen.github.io</small></a></p>
+        
+
+      </header>
+        
+      
+      
+      <section>
+
+      <h1 id="generate-a-database-with-different-doses">Generate a database with different doses</h1>
+
+<p>First, define the name of the folder where the database will be saved. For this example, we’ll use <code class="language-plaintext highlighter-rouge">example_03</code>. Then, go to the Database menu and select the option <code class="language-plaintext highlighter-rouge">Generate a new database</code>.</p>
+
+<p><img src="/images/example_03/show_database_view.jpg" alt="Show the database view with default values" /></p>
+
+<p>We’ll use the following parameters for this example:</p>
+
+<ul>
+  <li>Particle: 12C</li>
+  <li>NOCS: 100</li>
+  <li>NDIA: 11 \(\mu\)m</li>
+  <li>CDIA: 0 (we’ll assume it is equal to NDIA)</li>
+  <li>DNA: 5.6 Gbp</li>
+  <li>Energy: 126 MeV</li>
+  <li>20 different doses ranging from 0.1 to 12 Gy</li>
+</ul>
+
+<p>To set the number of doses (bins), click the <code class="language-plaintext highlighter-rouge">Energy bins</code> dropdown and select <code class="language-plaintext highlighter-rouge">Dose bins</code>. A button will appear to change the default energy value (0.5 MeV). Enter the desired energy value, in this case, 126 MeV.</p>
+
+<p><img src="/images/example_03/database_data.jpg" alt="Data values used in this example" /></p>
+
+<p>By default, the dose range is from 0.1 Gy to 10 Gy. To modify it, click on <code class="language-plaintext highlighter-rouge">Change dose interval</code>, then enter the desired values (e.g., 0.1 Gy minimum and 12 Gy maximum). Finally, click on Generate database.
+<em>Note: We use 0.1 Gy as the minimum dose because MCDS automatically replaces an input of 0 Gy with 1 Gy.</em></p>
+
+<p><img src="/images/example_03/change_dose_interval.jpg" alt="Change the dose interval" /></p>
+
+<p>Inside the selected folder (example_03, or default if none was specified), you will find the MCDS input and output files, along with the generated database (<code class="language-plaintext highlighter-rouge">.db</code>). This database contains:</p>
+
+<ul>
+  <li>Energy (<em>energia</em>)</li>
+  <li>LET at different depths</li>
+  <li>Yield (DSBs per cell) and its error (Yielde)</li>
+  <li>Lambda (DSBs per cell per track) and its error (lambdae)</li>
+</ul>
+
+<p><img src="/images/example_03/database_output.jpg" alt="Show output file" /></p>
+
+
+      </section>
+      <footer>
+        
+        <p>This project is maintained by <a href="https://github.com/mpvalen">mpvalen</a></p>
+        
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
+      </footer>
+    </div>
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Back to Top</button> 
+    <script src="/assets/js/scale.fix.js"></script>
+    <script src="/assets/js/script.js"></script>
+
+  </body>
+</html>
