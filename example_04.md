@@ -14,6 +14,6 @@ We’ll generate the database for all experiments involving the V79 cell line. Y
 
 ![Data used in this example](./images/example_04/example_data.jpg)
 
-Click on `Generate database`. The MCDS input and output files will be saved in the PIDE_database_outputs folder. This step may take some time depending on how many experiments are available for the selected cell line.
+Click on `Generate database`. The MCDS input and output files will be saved in the `PIDE_database_outputs` folder. This step may take some time depending on how many experiments are available for the selected cell line.
 
 [back](./examples.md)

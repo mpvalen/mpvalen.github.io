@@ -12,4 +12,6 @@ This sections contains some examples of how to use CELL:
 
 - [Generate a database with different doses](./example_03.md)
 
+- [Generate a database for a cell line using PIDE](./example_04.md)
+
 [back](./interfaz_grafica_adn.md)

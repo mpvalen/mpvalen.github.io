@@ -7,9 +7,9 @@
     <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
 
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Plot the cell survival against dose | [“CELL”]</title>
+<title>Generate a database for a cell line using PIDE | [“CELL”]</title>
 <meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="Plot the cell survival against dose" />
+<meta property="og:title" content="Generate a database for a cell line using PIDE" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]" />
 <meta property="og:description" content="[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]" />
@@ -18,12 +18,12 @@
 <meta property="og:site_name" content="[“CELL”]" />
 <meta property="og:type" content="website" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Plot the cell survival against dose" />
+<meta property="twitter:title" content="Generate a database for a cell line using PIDE" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]","headline":"Plot the cell survival against dose","url":"http://localhost:4000/example_04.html"}</script>
+{"@context":"https://schema.org","@type":"WebPage","description":"[“A user-friendly tool for computing cell survival based on radiation-induced DNA damage”]","headline":"Generate a database for a cell line using PIDE","url":"http://localhost:4000/example_04.html"}</script>
 <!-- End Jekyll SEO tag -->
 
-    <link rel="stylesheet" href="/assets/css/style.css?v=429d0b21a6efce01298f8f73b4e7dffdbe7c76d6">
+    <link rel="stylesheet" href="/assets/css/style.css?v=8b935886ec1744f17c569a288d31fb202029353f">
     <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
     <![endif]-->
@@ -62,7 +62,27 @@
       
       <section>
 
-      <h1 id="plot-the-cell-survival-against-dose">Plot the cell survival against dose</h1>
+      <h1 id="generate-a-database-for-a-cell-line-using-pide">Generate a database for a cell line using PIDE</h1>
+
+<p>In this example, we’ll generate a database using PIDE (Particle Irradiation Data Ensemble <a href="/interfaz_grafica_adn.html#references">1</a>). This option compiles the energies and doses used in experiments reported in PIDE for a specific cell line. MCDS simulations are then run using these parameters, and the corresponding yield values (DSBs per cell) are collected for each experiment.</p>
+
+<p>First, select <code class="language-plaintext highlighter-rouge">New database from PIDE exps</code> from the top menu.</p>
+
+<p><img src="/images/example_04/database_from_PIDE_view.jpg" alt="Database from PIDE" /></p>
+
+<p>We’ll generate the database for all experiments involving the V79 cell line. You can choose a different cell line using the dropdown menu. For V79, we use the following parameters:</p>
+
+<ul>
+  <li>NOCS: 100</li>
+  <li>NDIA: 5.6 µm</li>
+  <li>CDIA: 0 (assumed equal to NDIA)</li>
+</ul>
+
+<p><img src="/images/example_04/example_data.jpg" alt="Data used in this example" /></p>
+
+<p>Click on <code class="language-plaintext highlighter-rouge">Generate database</code>. The MCDS input and output files will be saved in the PIDE_database_outputs folder. This step may take some time depending on how many experiments are available for the selected cell line.</p>
+
+<p><a href="/examples.html">back</a></p>
 
 
       </section>

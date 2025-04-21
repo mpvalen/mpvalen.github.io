@@ -23,7 +23,7 @@ By default, the dose range is from 0.1 Gy to 10 Gy. To modify it, click on `Chan
 
 ![Change the dose interval](./images/example_03/change_dose_interval.jpg)
 
-Inside the selected folder (example_03, or default if none was specified), you will find the MCDS input and output files, along with the generated database (`.db`). This database contains:
+Inside the selected folder (`example_03`, or default if none was specified), you will find the MCDS input and output files, along with the generated database (`.db`). This database contains:
 
 - Energy (*energia*)
 - LET at different depths
@@ -31,3 +31,5 @@ Inside the selected folder (example_03, or default if none was specified), you w
 - Lambda (DSBs per cell per track) and its error (lambdae)
 
 ![Show output file](./images/example_03/database_output.jpg)
+
+[back](./examples.md)
